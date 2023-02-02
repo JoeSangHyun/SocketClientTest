@@ -28,7 +28,6 @@ public class MqConfig {
         Thread.sleep(10);
 
 
-
         client.close();
     }
 }
