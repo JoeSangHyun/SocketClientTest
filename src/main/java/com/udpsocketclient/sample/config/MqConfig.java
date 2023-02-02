@@ -27,7 +27,6 @@ public class MqConfig {
         System.out.println(" [x] MQ Set '" + message + "'");
         Thread.sleep(10);
 
-
         client.close();
     }
 }
