@@ -12,7 +12,9 @@ import java.util.concurrent.TimeoutException;
 public class MqClientConfig {
     private Connection connection = null;
     private Channel channel = null;
+//    private String SERVER_HOST = "127.0.0.1";
     private String SERVER_HOST;
+//    private int SERVER_PORT = 5672;
     private int SERVER_PORT;
     private String USER_NAME;
     private String USER_PASSWORD;
@@ -24,8 +26,10 @@ public class MqClientConfig {
 
         Properties prop = util.readProperties("application.properties");
 
+        String temp_port = prop.getProperty("rabbitmq.server.port");
+
         SERVER_HOST =  prop.getProperty("rabbitmq.server.ip");
-        SERVER_PORT = Integer.parseInt(prop.getProperty("rabbitmq.server.port"));
+        SERVER_PORT = Integer.parseInt(temp_port);
         USER_NAME = prop.getProperty("rabbitmq.server.username");
         USER_PASSWORD = prop.getProperty("rabbitmq.server.password");
 
