@@ -71,8 +71,10 @@ public class UDPEchoClient {
                             if(key.equals("x")) {
 
                                 // offsetdl + 일 경우
-                                double offset = -10.0;
+                                double offset = 0.0;
                                 double x = ((double)map.get(key)) - 2010.625 + offset;
+                                // - 28
+                                // 28
 
 
 //                                if(x >= 50) x = 50;
@@ -102,7 +104,7 @@ public class UDPEchoClient {
                             }
                             if(key.equals("y")) {
 
-                                double y = ((double)map.get(key)) - 1095.567;
+                                double y = ((double)map.get(key)) - 1095.567 ;
 
 //                                if( y>= 8) y = 8;
 //                                else if (y <= -8) y = -8;
