@@ -128,7 +128,11 @@ public class UDPEchoClient {
                     }
                     String jsonStr = gson.toJson(locationDto,LocationDto.class);
 
-                    if (locationDto.getId() <= 14 && locationDto.getId() > 0 ) {
+                    if (locationDto.getId() == 8 || locationDto.getId() == 9 ||
+                            locationDto.getId() == 11 || locationDto.getId() == 25 ||
+                            locationDto.getId() == 28 || locationDto.getId() == 29 ||
+                            locationDto.getId() == 104 || locationDto.getId() == 108
+                    ) {
                         try {
                             log.info("fork : " + jsonStr);
                             mqConfigFork.Send(jsonStr);

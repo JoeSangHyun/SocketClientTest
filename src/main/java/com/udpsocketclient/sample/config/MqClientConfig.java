@@ -15,7 +15,7 @@ public class MqClientConfig {
 //    private String SERVER_HOST = "127.0.0.1";
     private String SERVER_HOST;
 //    private int SERVER_PORT = 5672;
-    private int SERVER_PORT;
+    private int SERVER_PORT; 
     private String USER_NAME;
     private String USER_PASSWORD;
 
